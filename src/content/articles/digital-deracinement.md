@@ -1,6 +1,7 @@
 ---
 title: "インターネットの成れの果て⎯⎯私たちのデジタルホームレス化をめぐって"
 date: 2025-04-07
+image: "/wp-content/uploads/2025/04/rectangle_large_type_2_9595b73a058270cbf2cd646b421ae129-1-1024x536.webp"
 ---
 
 ## インターネットとともに失われた三十年

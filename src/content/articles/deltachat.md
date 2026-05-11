@@ -1,6 +1,7 @@
 ---
 title: "DeltaChatをはじめませんか"
 date: 2025-07-06
+image: "/wp-content/uploads/2025/07/Screenshot-2025-07-06-at-13.52.43.png"
 ---
 
 ## DeltaChat？
@@ -12,17 +13,35 @@ date: 2025-07-06
 
 ## DeltaChatを使ってみる
 DeltaChatには二通りの使い方があります。DeltaChat専用のメールアドレスを新たに作る方法と既存のメールアドレスを使う方法です。前者は「個々人のデータ主権」を守るのに有効です。後者は「他のメールアプリとの相互運用性」のために必要です。状況に応じて、両者を使い分けることをおすすめします。
+
+<img src="/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-13.05.06-1024x777.png" style="max-width:100%" />
+
 ## (a) DeltaChat専用のメールアドレスを作る
 アプリのインストール後、「アカウントを追加」→「Create New Profile」を押します。
+
+<img src="https://filedn.eu/lSVQwEEIDpO5dXwQG0B2seb/delta1.png" style="max-width:300px" />
+
 つづいて、アカウント名を入力後「Agree & Create Profile」を押せば、アカウント作成が完了します。
+
+<img src="https://filedn.eu/lSVQwEEIDpO5dXwQG0B2seb/delta2.png" style="max-width:300px" />
+
 他のDeltaChatユーザーとのやりとりのためには、「QRコード」ページから表示可能なフレンド登録用QRコードを読みとってもらうか、「Share Invite Link」から共有可能なフレンド登録用リンクを押してもらう必要があります。
+
+<img src="https://filedn.eu/lSVQwEEIDpO5dXwQG0B2seb/delta3.png" style="max-width:300px" />
 上述の手続きにより、[nine.testrun.org](https://nine.testrun.org) という DeltaChat の開発者が運営する[DeltaChat専用サーバー](https://chatmail.at)上にメールアドレスの作成をすることになります。サーバーの所在地はドイツにあるため、[プライバシーポリシー](https://nine.testrun.org/privacy.html)は[EU一般データ保護規則](https://ja.wikipedia.org/wiki/EU%E4%B8%80%E8%88%AC%E3%83%87%E3%83%BC%E3%82%BF%E4%BF%9D%E8%AD%B7%E8%A6%8F%E5%89%87)（GDPR）に準じています。なお、[こちらのリスト](https://chatmail.at/relays)にあるように、世界各地にDeltaChat専用サーバーが立てられています。各サーバーのウェブサイト上のQRコードや招待リンクを使うことで、新しいメールアドレスを作成することができます。
 DeltaChat専用サーバーは、E2E暗号化されていないメッセージを一切受けつけません。DeltaChatアプリは、QRコードやリンクによる事前のフレンド登録によって、E2E暗号化を可能にしています。裏を返せば、このような仕組みを持たないメールアプリとのやりとりは不可能です。そのため実質的には、DeltaChatアプリの使用者以外とのやりとりはできません（[Mailvelope](https://mailvelope.com/en)のような暗号化ツールを使う場合を除く）。
 ## (b) 既存のメールアドレスを使う
 はじめに「アカウントを追加」→「Create New Profile」→「Use Other Server」→「Classic E-Mail Login」を押します。
+
+<img src="https://filedn.eu/lSVQwEEIDpO5dXwQG0B2seb/delta4.png" style="max-width:300px" />
+
 既存のメールアドレスとパスワードを入力後「ログイン」を押します（場合によっては「追加設定」が必要です）。また、Gmailを使う場合は「[２段階認証プロセス](https://myaccount.google.com/signinoptions/twosv)」を有効にした上で「[アプリパスワード](https://myaccount.google.com/apppasswords)」を生成し、それをパスワード欄に入力する必要があります。
 メールを送るためには、相手先を連絡帳に追加しておく必要があります。「チャット」ページの右上にあるアイコンから「新規チャット」ページにうつり「Add Contact Manually 」を押して、相手先のメールアドレスと任意の名前を追加します。
+
+<img src="https://filedn.eu/lSVQwEEIDpO5dXwQG0B2seb/delta5.png" style="max-width:300px" />
 DeltaChatを使っていない相手ともメールのやりとりができます。「新規チャット」画面から「新規グループ」を作ることで、件名（＝グループ名）付きのメールを任意の数の相手先に送ることができます。いずれにしても、この場合、メールはE2E暗号化されずに送られます。
+<img src="https://filedn.eu/lSVQwEEIDpO5dXwQG0B2seb/delta6.png" style="max-width:300px" />
+
 相手がDeltaChatを使っている場合、フレンド登録用のQRコードやリンクを使って連絡先を追加することで、E2E暗号化されたやりとりをすることができます。この場合、サーバーの管理者によってやりとりの内容を閲覧されることはありませんが、その一方でIPアドレスをはじめとするメタ情報は暗号化されずにいます。
 以上のことから、次のように使い分けることをおすすめします。
   * 匿名性を重視しないかぎりは、既存のメールアドレスでDeltaChatアプリを使う。相手先がDeltaChatユーザーであれば、E2EEを有効にする。そうでなければ、通常通りのメールを送る。
