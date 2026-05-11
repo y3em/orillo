@@ -1,0 +1,139 @@
+---
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
+const pageTitle = title ? `${title} — Orillo` : 'Orillo';
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+
+      :root {
+        --text: #1a1a1a;
+        --bg: #fafaf8;
+        --muted: #666;
+        --border: #ddd;
+        --max: 680px;
+      }
+
+      body {
+        font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 0 1rem;
+        line-height: 1.8;
+        font-size: 1rem;
+      }
+
+      header {
+        max-width: var(--max);
+        margin: 2rem auto 0;
+        display: flex;
+        align-items: baseline;
+        gap: 2rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1rem;
+      }
+
+      header a {
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      header .site-name {
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      nav {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      nav a:hover { color: var(--text); }
+
+      main {
+        max-width: var(--max);
+        margin: 2.5rem auto 4rem;
+      }
+
+      footer {
+        max-width: var(--max);
+        margin: 0 auto 2rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+        border-top: 1px solid var(--border);
+        padding-top: 1rem;
+      }
+
+      h1 { font-size: 1.5rem; line-height: 1.4; }
+      h2 { font-size: 1.2rem; margin-top: 2rem; }
+      h3 { font-size: 1rem; margin-top: 1.5rem; }
+
+      a { color: var(--text); }
+      a:hover { opacity: 0.7; }
+
+      blockquote {
+        border-left: 3px solid var(--border);
+        margin: 1rem 0;
+        padding: 0 1rem;
+        color: var(--muted);
+      }
+
+      .article-meta {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .article-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .article-list li {
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 0;
+      }
+
+      .article-list li:first-child { border-top: 1px solid var(--border); }
+
+      .article-list a {
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .article-list a:hover { opacity: 0.7; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="site-name">Orillo</a>
+      <nav>
+        <a href="/">Manifesto</a>
+        <a href="/articles/">Articles</a>
+        <a href="/join/">Join</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      Copyright &copy; 2025 Orillo
+    </footer>
+  </body>
+</html>
