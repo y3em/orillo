@@ -15,6 +15,6 @@ const { Content } = await render(article);
 ---
 <Layout title={article.data.title}>
   <div class="article-meta">{article.data.date.toISOString().slice(0, 10)}</div>
-  <h1>{article.data.title}</h1>
+  <h1><span class="title-highlight">{article.data.title}</span></h1>
   <Content />
 </Layout>
