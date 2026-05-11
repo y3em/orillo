@@ -3,7 +3,7 @@ layout: ../../layouts/Layout.astro
 title: Join
 ---
 
-<img src="/wp-content/uploads/2025/05/Screenshot-2025-05-05-at-13.23.24-1024x452.png" style="max-width:400px;display:block;margin:0 auto 2rem" />
+<img src="/wp-content/uploads/2025/05/Screenshot-2025-05-05-at-13.23.24-1024x452.png" style="max-width:267px;display:block;margin:0 auto 2rem" />
 
 ## コミュニティとしてのOrilloとつながる
 Orilloは、プラットフォームというものへの違和を抱きつづける人たちのゆるやかなネットワークです。たとえば、XやLINEのようなプラットフォーム、あるいは、現代の教育システムや労働市場、家族制度をはじめとするプラットフォームに馴染めない人。あるいは、個人事業や家事労働、感情労働に日々従事している人。単に働きたくない人。働きたくても働けない人。そういった人たちが雑多な形で情報交換をしたりするため、自分の抱いた気持ちをないことにしないためのコミュニティです。
