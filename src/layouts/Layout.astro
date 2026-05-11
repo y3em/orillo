@@ -1,8 +1,9 @@
 ---
 interface Props {
   title?: string;
+  bodyClass?: string;
 }
-const { title } = Astro.props;
+const { title, bodyClass = 'page wp-theme-astra wp-child-theme-astra-child ast-desktop ast-narrow-container ast-no-sidebar ast-hfb-header' } = Astro.props;
 const pageTitle = title ? `${title} — Orillo` : 'Orillo';
 ---
 <!doctype html>
@@ -11,129 +12,121 @@ const pageTitle = title ? `${title} — Orillo` : 'Orillo';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
-    <style>
-      *, *::before, *::after { box-sizing: border-box; }
-
-      :root {
-        --text: #1a1a1a;
-        --bg: #fafaf8;
-        --muted: #666;
-        --border: #ddd;
-        --max: 680px;
-      }
-
-      body {
-        font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        margin: 0;
-        padding: 0 1rem;
-        line-height: 1.8;
-        font-size: 1rem;
-      }
-
-      header {
-        max-width: var(--max);
-        margin: 2rem auto 0;
-        display: flex;
-        align-items: baseline;
-        gap: 2rem;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 1rem;
-      }
-
-      header a {
-        text-decoration: none;
-        color: var(--text);
-      }
-
-      header .site-name {
-        font-weight: 700;
-        font-size: 1.1rem;
-      }
-
-      nav {
-        display: flex;
-        gap: 1.5rem;
-        font-size: 0.9rem;
-      }
-
-      nav a {
-        color: var(--muted);
-        text-decoration: none;
-      }
-
-      nav a:hover { color: var(--text); }
-
-      main {
-        max-width: var(--max);
-        margin: 2.5rem auto 4rem;
-      }
-
-      footer {
-        max-width: var(--max);
-        margin: 0 auto 2rem;
-        font-size: 0.8rem;
-        color: var(--muted);
-        border-top: 1px solid var(--border);
-        padding-top: 1rem;
-      }
-
-      h1 { font-size: 1.5rem; line-height: 1.4; }
-      h2 { font-size: 1.2rem; margin-top: 2rem; }
-      h3 { font-size: 1rem; margin-top: 1.5rem; }
-
-      a { color: var(--text); }
-      a:hover { opacity: 0.7; }
-
-      blockquote {
-        border-left: 3px solid var(--border);
-        margin: 1rem 0;
-        padding: 0 1rem;
-        color: var(--muted);
-      }
-
-      .article-meta {
-        font-size: 0.85rem;
-        color: var(--muted);
-        margin-bottom: 0.5rem;
-      }
-
-      .article-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .article-list li {
-        border-bottom: 1px solid var(--border);
-        padding: 1rem 0;
-      }
-
-      .article-list li:first-child { border-top: 1px solid var(--border); }
-
-      .article-list a {
-        text-decoration: none;
-        font-weight: 500;
-      }
-
-      .article-list a:hover { opacity: 0.7; }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP%3A900%2C400&display=fallback" />
+    <link rel="stylesheet" href="/wp.css" />
   </head>
-  <body>
-    <header>
-      <a href="/" class="site-name">Orillo</a>
-      <nav>
-        <a href="/">Manifesto</a>
-        <a href="/articles/">Articles</a>
-        <a href="/join/">Join</a>
-      </nav>
-    </header>
-    <main>
-      <slot />
-    </main>
-    <footer>
-      Copyright &copy; 2025 Orillo
-    </footer>
+  <body class={bodyClass}>
+<a
+	class="skip-link screen-reader-text"
+	href="#content"
+	title="内容をスキップ">
+		内容をスキップ</a>
+
+<div
+class="hfeed site" id="page">
+			<header
+		class="site-header header-main-layout-1 ast-primary-menu-enabled ast-logo-title-inline ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead"		>
+			<div id="ast-desktop-header" data-toggle-type="dropdown">
+		<div class="ast-main-header-wrap main-header-bar-wrap ">
+		<div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item" data-section="section-primary-header-builder">
+						<div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder">
+				<div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+											<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
+									<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
+							<div
+				class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"				>
+					<span class="site-logo-img"><a href="/" class="custom-logo-link" rel="home" aria-current="page"><img width="46" height="33" src="/wp-content/uploads/2025/04/chuha3-46x33.png" class="custom-logo" alt="Orillo" decoding="async" srcset="/wp-content/uploads/2025/04/chuha3-46x33.png 46w, /wp-content/uploads/2025/04/chuha3-300x213.png 300w, /wp-content/uploads/2025/04/chuha3-768x545.png 768w, /wp-content/uploads/2025/04/chuha3.png 860w" sizes="(max-width: 46px) 100vw, 46px" /></a></span><div class="ast-site-title-wrap">
+						<span class="site-title" itemprop="name">
+				<a href="/" rel="home" itemprop="url" >
+					Orillo
+				</a>
+			</span>
+						
+				</div>				</div>
+			<!-- .site-branding -->
+					</div>
+								</div>
+																								<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+										<div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
+			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-desktop" aria-label="メインサイトナビゲーション" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border ast-menu-hover-style-underline  stack-on-mobile"><li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-190"><a href="/" aria-current="page" class="menu-link">Manifesto</a></li>
+<li id="menu-item-384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-384"><a href="/articles/" class="menu-link">Articles</a></li>
+<li id="menu-item-267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-267"><a href="/join/" class="menu-link">Join</a></li>
+</ul></div></nav></div></div>		</div>
+									</div>
+												</div>
+					</div>
+								</div>
+			</div>
+	</div> <!-- Main Header Bar Wrap -->
+<div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
+		<div class="ast-main-header-wrap main-header-bar-wrap" >
+		<div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default" data-section="section-primary-header-builder">
+									<div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+													<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
+										<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
+							<div
+				class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"				>
+					<span class="site-logo-img"><a href="/" class="custom-logo-link" rel="home" aria-current="page"><img width="46" height="33" src="/wp-content/uploads/2025/04/chuha3-46x33.png" class="custom-logo" alt="Orillo" decoding="async" srcset="/wp-content/uploads/2025/04/chuha3-46x33.png 46w, /wp-content/uploads/2025/04/chuha3-300x213.png 300w, /wp-content/uploads/2025/04/chuha3-768x545.png 768w, /wp-content/uploads/2025/04/chuha3.png 860w" sizes="(max-width: 46px) 100vw, 46px" /></a></span><div class="ast-site-title-wrap">
+						<span class="site-title" itemprop="name">
+				<a href="/" rel="home" itemprop="url" >
+					Orillo
+				</a>
+			</span>
+						
+				</div>				</div>
+			<!-- .site-branding -->
+					</div>
+									</div>
+																									<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+										<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="section-header-mobile-trigger">
+						<div class="ast-button-wrap">
+				<button type="button" class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal"   aria-expanded="false">
+					<span class="screen-reader-text">Main Menu</span>
+					<span class="mobile-menu-toggle-icon">
+						<span aria-hidden="true" class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class='ast-mobile-svg ast-menu3-svg' fill='currentColor' version='1.1' xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path d='M6 3c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM6 8c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2zM6 13c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z'></path></svg></span><span aria-hidden="true" class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class='ast-mobile-svg ast-close-svg' fill='currentColor' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z'></path></svg></span>					</span>
+									</button>
+			</div>
+					</div>
+									</div>
+											</div>
+						</div>
+	</div>
+				<div class="ast-mobile-header-content content-align-flex-start ">
+						<div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-header-mobile-menu">
+			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="ast-mobile-site-navigation" aria-label="サイトナビゲーション : menu" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="ast-hf-mobile-menu" class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-190"><a href="/" aria-current="page" class="menu-link">Manifesto</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-384"><a href="/articles/" class="menu-link">Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-267"><a href="/join/" class="menu-link">Join</a></li>
+</ul></div></nav></div></div>		</div>
+					</div>
+			</div>
+		</header><!-- #masthead -->
+    <div id="content" class="site-content">
+      <div class="ast-container">
+        <div id="primary" class="content-area primary">
+          <main id="main" class="site-main">
+            <article class="post page type-page status-publish hentry">
+              <div class="entry-content">
+                <slot />
+              </div>
+            </article>
+          </main>
+        </div>
+      </div>
+    </div>
+<footer
+class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
+			<div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
+	<div class="ast-builder-grid-row-container-inner">
+					<div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+											<div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+								<div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder">
+				<div class="ast-footer-copyright"><p style="text-align: center">Copyright &copy; 2026 Orillo</p>
+</div>			</div>
+						</div>
+										</div>
+			</div>
+
+</div>
+	</footer>
   </body>
 </html>
