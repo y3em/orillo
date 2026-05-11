@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 const { Content } = await render(article);
 ---
-<Layout title={article.data.title}>
+<Layout title={article.data.title} ogImage={article.data.image}>
   <div class="article-meta">{article.data.date.toISOString().slice(0, 10)}</div>
   <h1><span class="title-highlight">{article.data.title}</span></h1>
   <Content />
