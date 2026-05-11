@@ -3,7 +3,7 @@ layout: ../layouts/Layout.astro
 title: Manifesto
 ---
 
-<img src="/wp-content/uploads/2025/04/f1.png" style="max-width:300px;display:block;margin:0 auto 2rem" />
+<img src="/wp-content/uploads/2025/04/f1.png" style="max-width:260px;display:block;margin:0 auto 2rem" />
 
 <h1><span class="title-highlight">ドロップアウトしても死なない</span></h1>
 あなたは今、プラットフォームにのせられていませんか。プラットフォームというのは、だれかの用意した仕組みのこと、一種の「テクノロジー」のことです。それはたとえば、ソーシャルメディアのような場所にかぎった話ではありません。学校や企業、工場もそう。社会保障や税制をはじめとする制度も、広い意味でのプラットフォームです。
